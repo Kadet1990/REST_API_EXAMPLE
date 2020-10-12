@@ -6,6 +6,8 @@ Step to run the example
 Copy the repository to local disk 
 $ git clone https://github.com/Kadet1990/REST_API_EXAMPLE.git
 
+or download zip file
+
 Install:
 
 python
