@@ -1,30 +1,30 @@
 # REST_API_EXAMPLE
 Sample rest api written in python to manage notes
 
-# Step to run the example
+### Step to run the example
 
 Copy the repository to local disk 
 $ git clone https://github.com/Kadet1990/REST_API_EXAMPLE.git
 
 or download zip file
 
-# Install:
+### Install:
 
-python
+1.python
 
-pip
+1.pip
 
-Run the following commands in cmd:
+1.Run the following commands in cmd:
 
-pip install flask
+*pip install flask
 
-pip install connexion
+*pip install connexion
 
-pip install flask-SQLAlchemy flask-marshmallow marshmallow-sqlalchemy marshmallow
+*pip install flask-SQLAlchemy flask-marshmallow marshmallow-sqlalchemy marshmallow
 
-pip install pytest
+*pip install pytest
 
-# Start project
+### Start project
 If You downloaded the zip file:
 
 Run cmd nad enter the path to the extracted directory: example: cmd cd ../REST_API_EXAMPLE-main
