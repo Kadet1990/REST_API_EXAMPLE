@@ -12,17 +12,17 @@ or download zip file
 
 1.python
 
-1.pip
+2.pip
 
-1.Run the following commands in cmd:
+3.Run the following commands in cmd:
 
-*pip install flask
+pip install flask
 
-*pip install connexion
+pip install connexion
 
-*pip install flask-SQLAlchemy flask-marshmallow marshmallow-sqlalchemy marshmallow
+pip install flask-SQLAlchemy flask-marshmallow marshmallow-sqlalchemy marshmallow
 
-*pip install pytest
+pip install pytest
 
 ### Start project
 If You downloaded the zip file:
