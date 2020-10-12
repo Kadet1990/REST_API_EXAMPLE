@@ -7,7 +7,9 @@ Copy the repository to local disk
 $ git clone https://github.com/Kadet1990/REST_API_EXAMPLE.git
 
 Install:
+
 python
+
 pip
 
 Run the following commands in cmd:
