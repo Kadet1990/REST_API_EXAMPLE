@@ -11,9 +11,13 @@ python
 pip
 
 Run the following commands in cmd:
+
 pip install flask
+
 pip install connexion
+
 pip install flask-SQLAlchemy flask-marshmallow marshmallow-sqlalchemy marshmallow
+
 pip install pytest
 
 If You have problems write jar.szwar@gmail.com
