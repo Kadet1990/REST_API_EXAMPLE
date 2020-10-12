@@ -1,0 +1,251 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger Rest Article
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /api
+
+# Paths supported by the server application
+paths:
+  /notes:
+    get:
+      operationId: note.read_all
+      tags:
+        - Notes
+      summary: Read the entire set of notes, sorted by titles
+      description: Read the entire set of notes, sorted by titles
+      responses:
+        200:
+          description: Successfully read notes set operation
+          schema:
+            type: array
+            items:
+              properties:
+                note_id:
+                  type: string
+                  description: Id of the notes
+                title:
+                  type: string
+                  description: Note title
+                content:
+                  type: string
+                  description: Content of the notes
+                createdtime:
+                  type: string
+                  description: Time to create the note
+                modifiedtime:
+                  type: string
+                  description: Note modification time
+
+    post:
+      operationId: note.create
+      tags:
+        - Notes
+      summary: Create a note
+      description: Create a new note
+      parameters:
+        - name: note
+          in: body
+          description: Note to create
+          required: True
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Title of the note
+              content:
+                type: string
+                description: Content of the note
+      responses:
+        201:
+          description: Successfully created note
+          schema:
+            properties:
+              note_id:
+                type: string
+                description: Id of the notes
+              title:
+                type: string
+                description: Note title
+              content:
+                type: string
+                description: Content of the notes
+              createdtime:
+                type: string
+                description: Time to create the note
+              modifiedtime:
+                type: string
+                description: Note modification time
+
+  /notes/{note_id}:
+    get:
+      operationId: note.read_one
+      tags:
+        - Notes
+      summary: Read one note
+      description: Read one note
+      parameters:
+        - name: note_id
+          in: path
+          description: Id of the note to get
+          type: integer
+          required: True
+      responses:
+        200:
+          description: Successfully read note from notes data operation
+          schema:
+            type: object
+            properties:
+              note_id:
+                type: string
+                description: Id of the notes
+              title:
+                type: string
+                description: Note title
+              content:
+                type: string
+                description: Content of the notes
+              createdtime:
+                type: string
+                description: Time to create the note
+              modifiedtime:
+                type: string
+                description: Note modification time
+
+    put:
+      operationId: note.update
+      tags:
+        - Notes
+      summary: Update a note
+      description: Update a note
+      parameters:
+        - name: note_id
+          in: path
+          description: Id the note to update
+          type: integer
+          required: True
+        - name: note
+          in: body
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+                description: Title of the note
+              content:
+                type: string
+                description: Content of the note
+      responses:
+        200:
+          description: Successfully updated note
+          schema:
+            properties:
+              note_id:
+                type: string
+                description: Id of the notes
+              title:
+                type: string
+                description: Note title
+              content:
+                type: string
+                description: Content of the notes
+              createdtime:
+                type: string
+                description: Time to create the note
+              modifiedtime:
+                type: string
+                description: Note modification time
+
+    delete:
+      operationId: note.delete
+      tags:
+        - Notes
+      summary: Delete a note from the notes list
+      description: Delete a note
+      parameters:
+        - name: note_id
+          in: path
+          type: integer
+          description: Id of the note to delete
+          required: true
+      responses:
+        200:
+          description: Successfully deleted a note
+
+
+  /history:
+    get:
+      operationId: arch_note.read_all
+      tags:
+        - History of notes
+      summary: History of notes
+      description: History of notes
+      responses:
+        200:
+          description: Successfully read notes history
+          schema:
+            type: array
+            items:
+              properties:
+                id:
+                  type: string
+                  description: Id of the history
+                note_id:
+                    type: string
+                    description: Id of the note
+                title:
+                  type: string
+                  description: Note title
+                content:
+                  type: string
+                  description: Content of the notes
+                comment:
+                  type: string
+                  description: Comment of the notes
+                createdtime:
+                  type: string
+                  description: Time to create the note
+
+  /history/{note_id}:
+    get:
+      operationId: arch_note.read_one
+      tags:
+        - History of notes
+      summary: Read history of note (one)
+      description: Read history of note (one)
+      parameters:
+        - name: note_id
+          in: path
+          description: Id of the note to get
+          type: integer
+          required: True
+      responses:
+        200:
+          description: Successfully read history of note from history data operation
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: Id of the history
+              note_id:
+                type: string
+                description: Id of the note
+              title:
+                type: string
+                description: Note title
+              content:
+                type: string
+                description: Content of the notes
+              comment:
+                type: string
+                description: Comment of the notes
+              createdtime:
+                type: string
+                description: Time to create the note
