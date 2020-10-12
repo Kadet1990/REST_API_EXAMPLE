@@ -1,12 +1,11 @@
-intalacja python
-intalacji pip
+install python
+install pip
 pip install flask
 pip install connexion
 pip install flask-SQLAlchemy
 pip install flask-marshmallow
 pip install marshmallow-sqlalchemy
 pip install Flask-SQLAlchemy flask-marshmallow marshmallow-sqlalchemy marshmallow
-sqllite jako silnik bazy danych
+sqllite as database
 python build_database.py
-
 pip install pytest
