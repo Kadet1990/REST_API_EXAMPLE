@@ -37,7 +37,7 @@ There will be a UI Swagger interface with the created API services
 
 All services are descibed with examples
 
-Try tp test it :)
+Try to test it :)
 
 If You have problems write jar.szwar@gmail.com
 
